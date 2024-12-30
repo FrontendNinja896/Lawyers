@@ -28,8 +28,6 @@ header .images {
 .flex1 {
   width: 100%;
   height: max-content;
-  box-shadow: -78px 7px 8px 31px rgba(114, 133, 148, 0.2);
-  background-blend-mode: screen;
 }
 .flex1 a:not(.HrefsAdapting a) {
   float: right;

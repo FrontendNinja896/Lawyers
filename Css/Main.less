@@ -7,15 +7,15 @@
 body{
     background:url('../Img/фон.jpg');
     background-repeat: @repeat;
-    background-size: 100%;
+    background-size: @fullpercent;
 }
 header{
-    width: 100%;
+    width: @fullpercent;
     height: 100px;
     background-color: #010101;
     a{
-        text-decoration: none;
-        color: #4F8FF0;
+        text-decoration: @no;
+        color: @optionalcolor;
         line-height: 21px;
         float: right;
         margin-top: -1%;
@@ -27,16 +27,14 @@ header{
     }
 }
 .flex1{
-    width: 100%;
+    width: @fullpercent;
     height: @maxcontent;
-    box-shadow: -78px 7px 8px 31px rgba(114, 133, 148, 0.2);
-    background-blend-mode: screen;
     a{
         &:not(.HrefsAdapting a){
             float: right;
             margin: 30px;
             margin-top: -2%;
-            text-decoration: none;
+            text-decoration: @no;
             color: @white;
             &:hover{
                 color: @optionalcolor;
@@ -45,18 +43,18 @@ header{
         }
     }
     .HrefsAdapting{
-        display: none;
-        width: 100%;
+        display: @no;
+        width: @fullpercent;
         height: @maxcontent;
         border: 5px solid silver;
         background-color: #3d5863;
         a{
-            text-decoration: none;
+            text-decoration: @no;
             color: @white;
         }
     }
     .adaptinmenu{
-        display: none;
+        display: @no;
         float: right;
     }
     #checkbox:checked ~ .HrefsAdapting{
@@ -70,7 +68,7 @@ header{
     flex-direction: @column;
     align-items: @center;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: @wrap;
     p{
         color: @white;
         text-align: @center;
@@ -92,7 +90,7 @@ header{
     }
 }
 .services{
-    width: 100%;
+    width: @fullpercent;
     height: @maxcontent;
     background-color: #9e9e9e;
     margin-top: 358px;
@@ -115,7 +113,7 @@ header{
     }
     .flex1,.flex2{
         display: @flex;
-        flex-wrap: wrap;
+        flex-wrap: @wrap;
         gap: 20px;
         justify-content: @center;
     }
@@ -191,7 +189,7 @@ button[class='Sertificats']{
     cursor: @pointer;
 }
 .legals{
-    width: 100%;
+    width: @fullpercent;
     height: @maxcontent;
     background-color: #9e9e9e;
     .ourlegals{
@@ -206,7 +204,7 @@ button[class='Sertificats']{
     }
     .legalsinfo{
         display: @flex;
-        flex-wrap: wrap;
+        flex-wrap: @wrap;
         justify-content: @center;
         gap: 20px;
         .Polina,.Alex,.Liza,.Maxim{
@@ -220,16 +218,16 @@ button[class='Sertificats']{
                     line-height: 50px;
                 }
                 &:nth-child(5){
-                    display: none;
+                    display: @no;
                 }
             }
             b{
-                display: none;
+                display: @no;
             }
             &:hover{
-                cursor: pointer;
+                cursor: @pointer;
                 img{
-                    display: none;
+                    display: @no;
                 }
                 b,.Lorem{
                     display: block;
@@ -239,7 +237,7 @@ button[class='Sertificats']{
     }
 }
 .clients{
-    width: 100%;
+    width: @fullpercent;
     height: 500px;
     background-image: url('../Img/Фон\ блока.jpg');
     background-repeat: @repeat;
@@ -253,7 +251,7 @@ button[class='Sertificats']{
     }
     .descriptionClients{
         display: @flex;
-        flex-wrap: wrap;
+        flex-wrap: @wrap;
         justify-content: @center;
         gap: 20px;
         .Nastya,.Sergei{
@@ -304,7 +302,7 @@ button[class='Sertificats']{
     .descriptionmaterials{
         display: @flex;
         justify-content: @center;
-        flex-wrap: wrap;
+        flex-wrap: @wrap;
         gap: 30px;
         .description{
             width: 424px;
@@ -325,7 +323,7 @@ button[class='Sertificats']{
     }
 }
 footer{
-    width: 100%;
+    width: @fullpercent;
     height: @maxcontent;
     background-color: #222222;
     .humandefender{
@@ -341,7 +339,7 @@ footer{
         .defenderinfo{
             display: @flex;
             justify-content: left;
-            flex-wrap: wrap;
+            flex-wrap: @wrap;
             gap: 30px;
             .flex{
                 width: 380px;
@@ -370,7 +368,7 @@ footer{
             .flex2{
                 a{
                     color: @white;
-                    text-decoration: none;
+                    text-decoration: @no;
                     text-transform: @uppercase;
                     line-height: 30px;
                     &:hover{
@@ -421,7 +419,7 @@ footer{
         }
     }
     .bottomfooter{
-        width: 100%;
+        width: @fullpercent;
         height: @maxcontent;
         background-color: #010101;
         p{
