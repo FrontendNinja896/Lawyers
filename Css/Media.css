@@ -1,0 +1,30 @@
+@media screen and (min-width: 100px) and (max-width: 1000px) {
+  header {
+    height: 120px;
+  }
+  body {
+    background-image: url('../Img/фонАдаптив2.jpg');
+    background-repeat: no-repeat;
+  }
+  .flex1 {
+    height: max-content;
+  }
+  .flex1 .href {
+    display: none;
+  }
+  .flex1 .adaptinmenu {
+    display: block;
+  }
+  .flex1 .adaptinmenu label[for='checkbox'] {
+    margin-right: 90px;
+  }
+  .flex1 .adaptinmenu input[type='checkbox'] {
+    display: none;
+  }
+  .flex2 {
+    height: max-content;
+  }
+  .usefullmaterialstext {
+    margin-top: 75%;
+  }
+}

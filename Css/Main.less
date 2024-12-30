@@ -1,0 +1,436 @@
+@import (less)'./Variables.less';
+*{
+    margin: @zero;
+    padding: @zero;
+    font-family: "Nunito Sans", serif;
+}
+body{
+    background:url('../Img/фон.jpg');
+    background-repeat: @repeat;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #010101;
+    a{
+        text-decoration: none;
+        color: #4F8FF0;
+        line-height: 21px;
+        float: right;
+        margin-top: -1%;
+        margin-right: 5%;
+    }
+    .images{
+        padding-left: 10%;
+        padding-top: 2%;
+    }
+}
+.flex1{
+    width: 100%;
+    height: @maxcontent;
+    box-shadow: -78px 7px 8px 31px rgba(114, 133, 148, 0.2);
+    background-blend-mode: screen;
+    a{
+        &:not(.HrefsAdapting a){
+            float: right;
+            margin: 30px;
+            margin-top: -2%;
+            text-decoration: none;
+            color: @white;
+            &:hover{
+                color: @optionalcolor;
+                text-decoration: underline;
+            }
+        }
+    }
+    .HrefsAdapting{
+        display: none;
+        width: 100%;
+        height: @maxcontent;
+        border: 5px solid silver;
+        background-color: #3d5863;
+        a{
+            text-decoration: none;
+            color: @white;
+        }
+    }
+    .adaptinmenu{
+        display: none;
+        float: right;
+    }
+    #checkbox:checked ~ .HrefsAdapting{
+        display: @flex;
+        flex-direction: @column;
+        gap: 20px;
+    }
+}
+.information{
+    display: @flex;
+    flex-direction: @column;
+    align-items: @center;
+    gap: 10px;
+    flex-wrap: wrap;
+    p{
+        color: @white;
+        text-align: @center;
+    }
+    button{
+        width: 200px;
+        height: 49px;
+        background-color: @optionalcolor;
+        color: @white;
+        border: @zero;
+        border-radius: 10px;
+        cursor: @pointer;
+    }
+    p{
+        &:nth-child(2){
+            color: @optionalcolor;
+            font-size: 40px;
+        }
+    }
+}
+.services{
+    width: 100%;
+    height: @maxcontent;
+    background-color: #9e9e9e;
+    margin-top: 358px;
+    .text{
+        
+        p{
+            &:nth-child(1){
+                color: #222222;
+                font-size: 28px;
+                text-transform: @uppercase;
+                font-weight: @bolder;
+            }
+        }
+        display: @flex;
+        align-items: @center;
+        flex-direction: @column;
+    }
+    .flex2{
+        margin-top: 5%;
+    }
+    .flex1,.flex2{
+        display: @flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: @center;
+    }
+    .item{
+        background-color: @white;
+        width: 424px;
+        height: 250px;
+        text-align: @center;
+        &:hover{
+            cursor: @pointer;
+            background-color: @optionalcolor;
+            img{
+                color: #E6E6E6;
+                filter: hue-rotate(80deg);
+            }
+            p{
+                &:nth-child(2){
+                    font-weight: @bolder;
+                    font-size: 20px;
+                }
+                color: @white;
+            }
+        }
+    }
+    button{
+        width: 138px;
+        height: 49px;
+        cursor: @pointer;
+        background-color: @optionalcolor;
+        color: @white;
+        border: @zero;
+        margin-left: 50%;
+    }
+}
+.legal{
+    display: @flex;
+    align-items: @center;
+    gap: 30px;
+    flex-direction: @column;
+    p{
+        &:nth-child(1){
+            text-transform: @uppercase;
+            font-size: 28px;
+            font-weight: @bolder;
+            span{
+                color: @optionalcolor;
+            }
+        }
+    }
+    
+    img{
+        align-self: end;
+        margin-top: -12%;
+        cursor: @pointer;
+    }
+}
+button[class='StoryCompany']{
+    width: 210px;
+    height: 49px;
+    background-color: @optionalcolor;
+    color: @white;
+    border: @zero;
+    cursor: @pointer;
+    font-weight: @bolder;
+    margin-left: 32%;
+}
+button[class='Sertificats']{
+    width: 161px;
+    height: 49px;
+    background-color: #E6E6E6;
+    font-weight: @bolder;
+    border: @zero;
+    cursor: @pointer;
+}
+.legals{
+    width: 100%;
+    height: @maxcontent;
+    background-color: #9e9e9e;
+    .ourlegals{
+        p{
+            &:nth-child(1){
+                text-transform: @uppercase;
+                font-weight: @bolder;
+                font-size: 28px;
+            }
+        }
+        text-align: @center;
+    }
+    .legalsinfo{
+        display: @flex;
+        flex-wrap: wrap;
+        justify-content: @center;
+        gap: 20px;
+        .Polina,.Alex,.Liza,.Maxim{
+            width: 312px;
+            height: @maxcontent;
+            background-color: @white;
+            text-align: @center;
+            p{
+                &:nth-child(2){
+                    font-weight: @bolder;
+                    line-height: 50px;
+                }
+                &:nth-child(5){
+                    display: none;
+                }
+            }
+            b{
+                display: none;
+            }
+            &:hover{
+                cursor: pointer;
+                img{
+                    display: none;
+                }
+                b,.Lorem{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.clients{
+    width: 100%;
+    height: 500px;
+    background-image: url('../Img/Фон\ блока.jpg');
+    background-repeat: @repeat;
+    .WhatAboutUsClients{
+        text-align: @center;
+        font-size: 28px;
+        p{
+            font-weight: @bolder;
+            text-transform: @uppercase;
+        }
+    }
+    .descriptionClients{
+        display: @flex;
+        flex-wrap: wrap;
+        justify-content: @center;
+        gap: 20px;
+        .Nastya,.Sergei{
+            width: 648px;
+            height: @maxcontent;
+            background-color: #FFFCE6;
+            .OOOKonsalting{
+                text-align: @center;
+                margin-top: -12%;
+                margin-right: 45%;
+            }
+            .ManyThink{
+                margin-top: 10%;
+            }
+        }
+    }
+    .buttons{
+        text-align: @center;
+        .AllOtziv,.WriteOtziv{
+            width: 146px;
+            height: 49px;
+            text-transform: @uppercase;
+            margin: 30px;
+        }
+        .AllOtziv{
+            background-color: @optionalcolor;
+            color: @white;
+            border: @zero;
+            cursor: @pointer;
+        }
+        .WriteOtziv{
+            background-color: #E6E6E6;
+            border: @zero;
+            cursor: @pointer;
+            font-weight: @bolder;
+        }
+    }
+}
+.usefullmaterialstext{
+    text-align: @center;
+    p{
+        &:nth-child(1){
+            text-transform: @uppercase;
+            font-weight: @bolder;
+            font-size: 28px;
+        }
+    }
+    .descriptionmaterials{
+        display: @flex;
+        justify-content: @center;
+        flex-wrap: wrap;
+        gap: 30px;
+        .description{
+            width: 424px;
+            height: @maxcontent;
+            background-color: #E6E6E6;
+        }
+    }
+    button{
+        width: 153px;
+        height: 49px;
+        background-color: @optionalcolor;
+        border: @zero;
+        color: @white;
+        font-weight: @bolder;
+        text-transform: @uppercase;
+        margin-top: 5%;
+        cursor: @pointer;
+    }
+}
+footer{
+    width: 100%;
+    height: @maxcontent;
+    background-color: #222222;
+    .humandefender{
+        padding-top: 4%;
+        p{
+            color: #9A9898;
+            float: right;
+            margin-right: 15%;
+        }
+        hr{
+            width: 50%;
+        }
+        .defenderinfo{
+            display: @flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            gap: 30px;
+            .flex{
+                width: 380px;
+                height: @maxcontent;
+                margin-top: 50px;
+            }
+            .flex1{
+                margin-top: -25px;
+                img{
+                    margin-top: 15%;
+                }
+                .Address,.city,.consultation,.phone,.Correspondence,.email{
+                    position: relative;
+                    top: -30px;
+                }
+                .Address,.consultation,.Correspondence{
+                   color: #575757;
+                   text-transform: @uppercase;
+                   font-weight: @bolder;
+                }
+                .city,.phone,.email{
+                    margin-left: 60px;
+                    color: @white;
+                }
+            }
+            .flex2{
+                a{
+                    color: @white;
+                    text-decoration: none;
+                    text-transform: @uppercase;
+                    line-height: 30px;
+                    &:hover{
+                        color: #3E65A2;
+                    }
+                }
+            }
+            .flex3{
+                img{
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 50%;
+                }
+                span{
+                    &:nth-child(2),&:nth-child(3){
+                        position: relative;
+                        top: -30px;
+                    }
+                    &:nth-child(2){
+                        color: @white;
+                        font-weight: @bolder;
+                    }
+                    &:nth-child(3){
+                        color: #ACACAC;
+                        margin-left: 18%;
+                    }
+                    
+                }
+                p{
+                    &:not(.ask){
+                        margin-top: 5%;
+                    }
+                    
+                }
+                .ask{
+                    width: 241px;
+                    height: 49px;
+                    border: 5px solid @optionalcolor;
+                    background-color: @optionalcolor;
+                    color: @white;
+                    font-weight: @bolder;
+                    text-transform: @uppercase;
+                    float: left;
+                    padding-top: 5%;
+                    cursor: @pointer;
+                }
+            }
+        }
+    }
+    .bottomfooter{
+        width: 100%;
+        height: @maxcontent;
+        background-color: #010101;
+        p{
+            &:nth-child(1){
+                float: left;
+            }
+            &:nth-child(2){
+                text-align: end;
+            }
+            color: @white;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import (less) './Variables.less';
+@media screen and (min-width:100px) and (max-width:1000px){
+    header{
+        height: 120px;
+    }
+    body{
+        background-image: url('../Img/фонАдаптив2.jpg');
+        background-repeat: no-repeat;
+    }
+    .flex1{
+        height: @maxcontent;
+        .href{
+            display: none;
+        }
+        .adaptinmenu{
+            display: block;
+            label[for='checkbox']{
+                margin-right: 90px;
+            }
+            input[type='checkbox']{
+                display: none;
+            }
+        }
+    }
+    .flex2{
+        height: max-content;
+    }
+    .usefullmaterialstext{
+        margin-top: 75%;
+    }
+}
